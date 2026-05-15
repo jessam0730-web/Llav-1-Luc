@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fondo con collage */
+.collage-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('tu-collage.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    filter: brightness(0.6) blur(2px);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+    z-index: -1;
+}
+
+.container {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Header */
+.album-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.release-year {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.group-logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+/* Botones de canciones */
+.tracklist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.track-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+/* Efectos */
+.track-btn:hover {
+    background: rgba(255, 255, 255, 0.3); /* Cambia color en PC */
+    transform: scale(1.02);
+}
+
+.track-btn:active {
+    transform: scale(0.95); /* Efecto de click/presión */
+}
+
+/* Vista de Detalle (Nueva página simulada) */
+.song-detail-view {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Oculto a la derecha */
+    width: 100%;
+    height: 100%;
+    background: #111;
+    z-index: 100;
+    transition: left 0.4s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.song-detail-view.active {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.lyrics {
+    white-space: pre-line;
+    line-height: 1.8;
+    color: #ccc;
+    padding-bottom: 50px;
+}

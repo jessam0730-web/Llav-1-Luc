@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercurio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Collage de fondo -->
+    <div class="collage-background"></div>
+    <div class="overlay"></div>
+
+    <main class="container">
+        <!-- Encabezado del Disco -->
+        <header class="album-header">
+            <h1 class="album-title">MERCURIO</h1>
+            <p class="release-year">℗ 1995 Columbia</p>
+            <div class="group-logo">
+                <img src="logo.jpg" alt="Logo">
+            </div>
+        </header>
+      <section class="tracklist">
+    <button class="track-btn" onclick="goToSong('ENAMORADISIMO', 'L1R0rbOz4-s')">1. Enamoradisimo</button>
+    <button class="track-btn" onclick="goToSong('Canción 2', 'ID_YOUTUBE_1')">2. Un Puñado de Humo</button>
+    <button class="track-btn" onclick="goToSong('Canción 3', 'ID_YOUTUBE_1')">3. Besos Que Matan</button>
+    <button class="track-btn" onclick="goToSong('Canción 4', 'ID_YOUTUBE_1')">4. Sellado Con Un Beso</button>
+    <button class="track-btn" onclick="goToSong('Canción 5', 'ID_YOUTUBE_1')">5. Trece Años</button>
+    <button class="track-btn" onclick="goToSong('Canción 6', 'ID_YOUTUBE_1')">6. Como Decirle Que La Quiero</button>
+    <button class="track-btn" onclick="goToSong('Canción 7', 'ID_YOUTUBE_1')">7. La Puerta De La Escuela</button>
+    <button class="track-btn" onclick="goToSong('Canción 8', 'ID_YOUTUBE_1')">8. Niños De La Calle</button>
+    <button class="track-btn" onclick="goToSong('Canción 9', 'ID_YOUTUBE_1')">9. Cantaré Para Ti</button>
+    <button class="track-btn" onclick="goToSong('Canción 10', 'ID_YOUTUBE_1')">10. Donde Da La Vuelta El Aire</button>
+    <button class="track-btn" onclick="goToSong('Canción 11', 'ID_YOUTUBE_1')">11. Un Puñado De Humo (Versión Acústica)</button>
+</section>
+    </main>
+    <div id="song-detail" class="song-detail-view">
+        <button class="close-btn" onclick="closeDetail()">✕ Volver</button>
+        <div id="detail-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
